@@ -40,4 +40,4 @@ script = ExtResource("6_duo2v")
 [node name="Neck" type="Node3D" parent="." unique_id=1183583922]
 
 [node name="Camera3D" type="Camera3D" parent="Neck" unique_id=2048699579]
-transform = Transform3D(1, 0, 0, 0, 0.9209952, 0.38957405, 0, -0.38957405, 0.9209952, 0, 2.861448, 3.9900951)
+transform = Transform3D(1, 0, 0, 0, 0.9209952, 0.38957405, 0, -0.38957405, 0.9209952, 0, 1.6994165, 2.6728048)

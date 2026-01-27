@@ -6,8 +6,8 @@ var mouse_sens := 0.001
 @export var gravity := -20.0
 @export var jump_impulse := 10.0
 
-@export var neck: Node3D
-@export var camera: Camera3D
+@onready var neck: Node3D = $Neck
+@onready var camera: Camera3D = $Neck/Camera3D
 
 const SPEED = 10.0
 const JUMP_VELOCITY = 7
@@ -35,10 +35,10 @@ func _physics_process(_delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		neck.rotate_y(-event.relative.x * mouse_sens)
-		camera.rotate_x(-event.relative.y * mouse_sens)
+		#camera.rotate_x(-event.relative.y * mouse_sens)
 		
-		camera.rotation.x = clamp(
-		camera.rotation.x,
-		deg_to_rad(-90),
-		deg_to_rad(90)
-	)
+		#camera.rotation.x = clamp(
+		#camera.rotation.x,
+		#deg_to_rad(-90),
+		#deg_to_rad(90)
+	#)
