@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bb762xwdu003v"]
 
 [ext_resource type="Texture2D" uid="uid://bwcrty03vo3" path="res://icon.svg" id="1_0sv7v"]
-[ext_resource type="PackedScene" uid="uid://n1bmpmajeq05" path="res://player.tscn" id="1_0too2"]
+[ext_resource type="PackedScene" uid="uid://n1bmpmajeq05" path="res://Scenes/Player/player.tscn" id="1_0too2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -43,7 +43,5 @@ mesh = SubResource("PlaneMesh_dd5v6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=317523363]
 shape = SubResource("ConcavePolygonShape3D_6r7w8")
 
-[node name="Player" parent="." unique_id=726933539 node_paths=PackedStringArray("neck", "camera") instance=ExtResource("1_0too2")]
+[node name="Player" parent="." unique_id=726933539 instance=ExtResource("1_0too2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.14152, 0)
-neck = NodePath("")
-camera = NodePath("")
