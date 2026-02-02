@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bygnecou7c0rb"]
+
+[ext_resource type="PackedScene" uid="uid://bdguvvayyvy7o" path="res://Assets/3D Models/Tree/TreeWall.glb" id="1_wxn2h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1vmfc"]
+size = Vector3(5.1627197, 3.2473755, 0.046569824)
+
+[node name="TreeWall" unique_id=1360003200 instance=ExtResource("1_wxn2h")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="Plane" parent="." index="0" unique_id=1220054865]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=991238869]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1901360658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0025024414, 0.61587524, -0.014373779)
+shape = SubResource("BoxShape3D_1vmfc")

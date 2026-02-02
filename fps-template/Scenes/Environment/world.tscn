@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bb762xwdu003v"]
 
-[ext_resource type="Texture2D" uid="uid://bwcrty03vo3" path="res://icon.svg" id="1_0sv7v"]
 [ext_resource type="PackedScene" uid="uid://n1bmpmajeq05" path="res://Scenes/Player/player.tscn" id="1_0too2"]
+[ext_resource type="Texture2D" uid="uid://yp8inekrfwya" path="res://dirt-color.png" id="1_mh7mo"]
+[ext_resource type="Texture2D" uid="uid://dxclhqrr82wlc" path="res://dirt-normal.png" id="2_fvyv6"]
+[ext_resource type="PackedScene" uid="uid://bstmcgp3ir7yg" path="res://Scenes/Environment/trees.tscn" id="4_fvyv6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -11,13 +13,16 @@ ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
 sky_material = SubResource("ProceduralSkyMaterial_fj7yv")
 
 [sub_resource type="Environment" id="Environment_aqk2v"]
-background_mode = 2
+background_mode = 1
+background_color = Color(0.06469653, 0.06469653, 0.06469653, 1)
 sky = SubResource("Sky_tlwt5")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbn82"]
-albedo_texture = ExtResource("1_0sv7v")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fvyv6"]
+albedo_texture = ExtResource("1_mh7mo")
+normal_enabled = true
+normal_texture = ExtResource("2_fvyv6")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_dd5v6"]
 size = Vector2(50, 50)
@@ -29,13 +34,15 @@ data = PackedVector3Array(25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0,
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=974805551]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+light_color = Color(0.17522484, 0.3452884, 0.36757788, 1)
+light_energy = 0.333
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=431684593]
 environment = SubResource("Environment_aqk2v")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1744721674]
-material_override = SubResource("StandardMaterial3D_fbn82")
+material_override = SubResource("StandardMaterial3D_fvyv6")
 mesh = SubResource("PlaneMesh_dd5v6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1714357429]
@@ -45,3 +52,5 @@ shape = SubResource("ConcavePolygonShape3D_6r7w8")
 
 [node name="Player" parent="." unique_id=726933539 instance=ExtResource("1_0too2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.14152, 0)
+
+[node name="Trees" parent="." unique_id=1416332267 instance=ExtResource("4_fvyv6")]

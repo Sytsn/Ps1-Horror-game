@@ -2,11 +2,9 @@ class_name Player extends CharacterBody3D
 
 @export var player_res: PlayerRes
 
-@export var jump_impulse := 10.0
-
 @onready var neck: Node3D = $Neck
 @onready var camera: Camera3D = $Neck/Camera3D
-@onready var player_mesh: MeshInstance3D = $MeshInstance3D
+@onready var player_mesh: Node3D = $CharacterModelV4
 
 var is_paused = false
 var mesh
