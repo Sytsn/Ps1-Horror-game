@@ -4,18 +4,14 @@ class_name Player extends CharacterBody3D
 
 @onready var neck: Node3D = $Neck
 @onready var camera: Camera3D = $Neck/Camera3D
-@onready var player_mesh: Node3D = $CharacterModelV4
+@onready var player_mesh: Node3D = $Model
 
 var is_paused = false
-var mesh
+var animation_player: AnimationPlayer
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	mesh = ImmediateMesh.new()
-	# Optional: Set a material for unshaded/colored lines
-	var material = StandardMaterial3D.new()
-	material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	material.albedo_color = Color.GREEN
+	animation_player = player_mesh.find_child("AnimationPlayer")
 
 
 func move_player(delta: float) -> void:

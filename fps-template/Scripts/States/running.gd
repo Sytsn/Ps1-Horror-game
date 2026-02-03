@@ -1,8 +1,10 @@
 extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
-	#player.animation_player.play("run")
-	pass
+	var animation : Animation = player.animation_player.get_animation("Walk")
+	animation.loop_mode = Animation.LOOP_LINEAR
+	player.animation_player.play("Walk")
+
 
 func physics_update(delta: float) -> void:
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")

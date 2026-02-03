@@ -1,8 +1,10 @@
 extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
-	print("idle")
-	#player.animation_player.play("idle")
+	var animation : Animation = player.animation_player.get_animation("Idle")
+	animation.loop_mode = Animation.LOOP_LINEAR
+	player.animation_player.play("Idle")
+	
 
 func physics_update(delta: float) -> void:
 	player.move_player(delta)
