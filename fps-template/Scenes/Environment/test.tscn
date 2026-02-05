@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://bvkbdjeeyhvlg"]
+
+[ext_resource type="PackedScene" uid="uid://cfe64c3f3nmm5" path="res://Assets/3D Models/Hallway/HallwayFloorV2.glb" id="2_cscyc"]
+[ext_resource type="PackedScene" uid="uid://n1bmpmajeq05" path="res://Scenes/Player/player.tscn" id="2_nc4aa"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cscyc"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_nc4aa"]
+sky_material = SubResource("ProceduralSkyMaterial_cscyc")
+
+[sub_resource type="Environment" id="Environment_80ipc"]
+background_mode = 2
+sky = SubResource("Sky_nc4aa")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Node3D" type="Node3D" unique_id=1214164217]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1594188110]
+environment = SubResource("Environment_80ipc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=783454737]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, -8, 0, 13)
+shadow_enabled = true
+directional_shadow_max_distance = 1.0
+
+[node name="Player" parent="." unique_id=1226056529 instance=ExtResource("2_nc4aa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="HallwayFloorV2" parent="." unique_id=961363103 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 13)
+
+[node name="HallwayFloorV3" parent="." unique_id=1169063817 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 8)
+
+[node name="HallwayFloorV4" parent="." unique_id=1925751533 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 3)
+
+[node name="HallwayFloorV8" parent="." unique_id=1418593390 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 13)
+
+[node name="HallwayFloorV9" parent="." unique_id=527805715 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 8)
+
+[node name="HallwayFloorV10" parent="." unique_id=1149655441 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 3)
+
+[node name="HallwayFloorV11" parent="." unique_id=1714433084 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 13)
+
+[node name="HallwayFloorV12" parent="." unique_id=789270670 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 8)
+
+[node name="HallwayFloorV13" parent="." unique_id=757566936 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+
+[node name="HallwayFloorV5" parent="." unique_id=534729247 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 8)
+
+[node name="HallwayFloorV7" parent="." unique_id=792490921 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 3)
+
+[node name="HallwayFloorV6" parent="." unique_id=1069905909 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 13)
+
+[node name="HallwayFloorV14" parent="." unique_id=1072581090 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2)
+
+[node name="HallwayFloorV15" parent="." unique_id=1462599682 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -7)
+
+[node name="HallwayFloorV16" parent="." unique_id=130708451 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -12)
+
+[node name="HallwayFloorV17" parent="." unique_id=1697858880 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -2)
+
+[node name="HallwayFloorV18" parent="." unique_id=766245234 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -7)
+
+[node name="HallwayFloorV19" parent="." unique_id=1243912481 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -12)
+
+[node name="HallwayFloorV20" parent="." unique_id=468601445 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+
+[node name="HallwayFloorV21" parent="." unique_id=3360303 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -7)
+
+[node name="HallwayFloorV22" parent="." unique_id=1606363420 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -12)
+
+[node name="HallwayFloorV23" parent="." unique_id=1653314573 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -7)
+
+[node name="HallwayFloorV24" parent="." unique_id=945491378 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -12)
+
+[node name="HallwayFloorV25" parent="." unique_id=343206539 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2)
+
+[node name="HallwayFloorV26" parent="." unique_id=770538535 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 13)
+
+[node name="HallwayFloorV27" parent="." unique_id=1653943696 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
+
+[node name="HallwayFloorV28" parent="." unique_id=449904397 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+
+[node name="HallwayFloorV29" parent="." unique_id=639447987 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 13)
+
+[node name="HallwayFloorV30" parent="." unique_id=2113976467 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 8)
+
+[node name="HallwayFloorV31" parent="." unique_id=469851696 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+
+[node name="HallwayFloorV32" parent="." unique_id=894178150 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 13)
+
+[node name="HallwayFloorV33" parent="." unique_id=9256669 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 8)
+
+[node name="HallwayFloorV34" parent="." unique_id=1996783429 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 3)
+
+[node name="HallwayFloorV35" parent="." unique_id=611301608 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 8)
+
+[node name="HallwayFloorV36" parent="." unique_id=25485916 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 3)
+
+[node name="HallwayFloorV37" parent="." unique_id=1561407235 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 13)
+
+[node name="HallwayFloorV38" parent="." unique_id=1075965734 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="HallwayFloorV39" parent="." unique_id=1768527394 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="HallwayFloorV40" parent="." unique_id=952945461 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -12)
+
+[node name="HallwayFloorV41" parent="." unique_id=499778347 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
+
+[node name="HallwayFloorV42" parent="." unique_id=1033391308 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -7)
+
+[node name="HallwayFloorV43" parent="." unique_id=42054021 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -12)
+
+[node name="HallwayFloorV44" parent="." unique_id=2121533298 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -2)
+
+[node name="HallwayFloorV45" parent="." unique_id=972696225 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -7)
+
+[node name="HallwayFloorV46" parent="." unique_id=761635975 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -12)
+
+[node name="HallwayFloorV47" parent="." unique_id=1975639415 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -7)
+
+[node name="HallwayFloorV48" parent="." unique_id=913240069 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -12)
+
+[node name="HallwayFloorV49" parent="." unique_id=2075591860 instance=ExtResource("2_cscyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -2)
